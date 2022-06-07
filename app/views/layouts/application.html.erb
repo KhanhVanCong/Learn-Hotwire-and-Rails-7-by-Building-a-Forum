@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/navigation" %>
+    <div class="container mt-1">
+      <%= yield %>
+    </div>
   </body>
 </html>
