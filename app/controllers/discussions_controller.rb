@@ -6,6 +6,10 @@ class DiscussionsController < ApplicationController
     @discussions = Discussion.all.order(updated_at: :desc)
   end
 
+  def show
+    @new_post = @discussion.posts.new
+  end
+
   def new
     @discussion = Discussion.new
     @discussion.posts.new
