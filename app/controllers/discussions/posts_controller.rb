@@ -5,7 +5,7 @@ module Discussions
     before_action :set_post, only: [:show, :edit, :update, :destroy]
 
     def show
-
+      sleep 5
     end
 
     def edit
