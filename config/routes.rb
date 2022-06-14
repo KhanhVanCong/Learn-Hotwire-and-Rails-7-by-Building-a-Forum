@@ -16,5 +16,12 @@ Rails.application.routes.draw do
       post '/mark_as_read', to: "notifications#read_all", as: :read
     end
   end
-  root "main#index"
+
+  unauthenticated do
+    root "main#index", as: :unauthenticated_root
+  end
+
+  authenticated do
+    root to: "discussions#index"
+  end
 end
